@@ -23,7 +23,7 @@ function all() {
 					maxPerPerson:5
 				}
 			]
-		), 1000)
+		), 2000)
 	})
 	return data
 }

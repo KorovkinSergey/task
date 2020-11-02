@@ -31,7 +31,12 @@ class Cart extends React.Component{
 
         return (
             <div>
-              <h2>В корзине {cartModel.countTotal} товаров на сумму {cartModel.total}</h2>
+              {
+                cartModel.countTotal === 0
+                  ? <h2>Корзина пуста</h2>
+                  :<h2>В корзине {cartModel.countTotal} товаров на сумму {cartModel.total}</h2>
+              }
+
                 <table className="table table-bordered">
                     <thead>
                         <tr>
