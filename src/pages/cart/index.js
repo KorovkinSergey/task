@@ -3,9 +3,9 @@ import AppMinMax from '~c/inputs/minmax';
 import withStore from '~/hocs/withStore';
 
 class Cart extends React.Component{
+
     render(){
         let cartModel = this.props.stores.cart;
-
         let productsRows = cartModel.productsDetailed.map((product, i) => {
             return (
                 <tr key={product.id}>
@@ -31,7 +31,12 @@ class Cart extends React.Component{
 
         return (
             <div>
-                <h2>Cart</h2>
+              {
+                cartModel.countTotal === 0
+                  ? <h2>Корзина пуста</h2>
+                  :<h2>В корзине {cartModel.countTotal} товаров на сумму {cartModel.total}</h2>
+              }
+
                 <table className="table table-bordered">
                     <thead>
                         <tr>
@@ -46,7 +51,7 @@ class Cart extends React.Component{
                         {productsRows}
                     </tbody>
                 </table>
-                <h3>Total: {cartModel.total}</h3>
+
                 <hr/>
             </div>
         );

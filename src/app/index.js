@@ -19,7 +19,7 @@ import stores from '~s';
             <Provider stores={stores}>
                 <Router>
                     <div className="container">
-                        header
+                        Интернет магазин
                         <hr/>
                         <div className="row">
                             <div className="col col-3">

@@ -10,7 +10,6 @@ class RootStore{
             products
         }
 
-
         this.cart = new cartStore(this);
         this.products = new productsStore(this);
     }

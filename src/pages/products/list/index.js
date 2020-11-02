@@ -27,12 +27,14 @@ import {observer, inject} from 'mobx-react';
                     <Card.Body>
                         <Card.Title>{product.title}</Card.Title>
                         <Card.Text>
-                            <strong>Осталось {product.amount}</strong>
+                            <strong>На складе: {product.amount}</strong>
+                        </Card.Text>
+                        <Card.Text>
+                            <strong>Максимум в корзину: {product.maxPerPerson} </strong>
                         </Card.Text>
                         <Card.Text>
                             <strong>Цена: {product.price}</strong>
                         </Card.Text>
-
                         <hr/>
                         {btn}
                     </Card.Body>
