@@ -3,9 +3,9 @@ import AppMinMax from '~c/inputs/minmax';
 import withStore from '~/hocs/withStore';
 
 class Cart extends React.Component{
+
     render(){
         let cartModel = this.props.stores.cart;
-
         let productsRows = cartModel.productsDetailed.map((product, i) => {
             return (
                 <tr key={product.id}>

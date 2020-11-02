@@ -35,7 +35,6 @@ import {observer, inject} from 'mobx-react';
                         <Card.Text>
                             <strong>Цена: {product.price}</strong>
                         </Card.Text>
-
                         <hr/>
                         {btn}
                     </Card.Body>

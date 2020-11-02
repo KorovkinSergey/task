@@ -8,4 +8,5 @@ import stores from '~s'
 
 stores.products.load()
 
+
 ReactDom.render(<App/>, document.querySelector('#app'));

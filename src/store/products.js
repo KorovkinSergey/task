@@ -1,4 +1,5 @@
 import {observable, computed, action} from 'mobx';
+import stores from '~s/index'
 
 
 export default class {
@@ -24,6 +25,7 @@ export default class {
     @action load(){
         this.api.all().then(data => {
             this.items = data
+            stores.cart.localStorageGet()
         })
     }
 
