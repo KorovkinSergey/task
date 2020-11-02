@@ -5,16 +5,15 @@ const HTMLWebpackPlugin = require('html-webpack-plugin')
 let conf = {
     entry: './src/main.js',
     output: {
-        path: path.resolve(__dirname, './dist/'),
-        filename: 'main.js',
-        publicPath: './'
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'main.js'
     },
     plugins: [
         new MiniCssExtractPlugin({
             filename: 'styles.css',
         }),
         new HTMLWebpackPlugin({
-            template: './index.html'
+            template: 'index.html'
         })
     ],
     module: {
@@ -78,7 +77,8 @@ let conf = {
         }
     },
     devServer: {
-        historyApiFallback: true
+        port: 3200
+
     }
 };
 
