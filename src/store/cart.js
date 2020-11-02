@@ -20,9 +20,18 @@ export default class{
 
     @computed get total(){
         return this.productsDetailed.reduce((t, pr) => {
+            console.log('1')
             return t + pr.price * pr.cnt;
+
         }, 0);
     }
+
+    @computed get countTotal(){
+        return this.productsDetailed.reduce((t, pr) => {
+            return t + pr.cnt;
+        }, 0);
+    }
+
 
     @action add(id){
         this.products.push({id, cnt: 1});

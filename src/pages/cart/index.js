@@ -31,7 +31,7 @@ class Cart extends React.Component{
 
         return (
             <div>
-                <h2>Cart</h2>
+              <h2>В корзине {cartModel.countTotal} товаров на сумму {cartModel.total}</h2>
                 <table className="table table-bordered">
                     <thead>
                         <tr>
@@ -46,7 +46,7 @@ class Cart extends React.Component{
                         {productsRows}
                     </tbody>
                 </table>
-                <h3>Total: {cartModel.total}</h3>
+
                 <hr/>
             </div>
         );
